@@ -1,3 +1,5 @@
+---——————————=》》》》=《༺=★=༻》=《《《《=——————————
+
 uper ='1'i='退出辅助!(-109)'print(i)
 t=1
 
@@ -528,7 +530,7 @@ SJ = os.date("%Y年%m月%d日%H时%M分")
 menu = gg.choice({
 	 "开始炸图",
 	 "退出炸图",
-}, nil, "当前时间:"..SJ.."\n版本号:1.10.6.0")
+}, nil, "当前时间:"..SJ.."\n版本号:1.11.0.0\n大部分功能开启后均不可关闭(懒)")
 if menu == 1 then CAZY() end
 if menu == 2 then os.exit() end
 FX1=0
@@ -559,7 +561,7 @@ function CAZT()
 menu = gg.choice({
 	 "创造炸图",
 	 "生存炸图",
-	 "通用卡房",
+	 "乐器卡房",
 	 "返回主页",
 }, nil, "")
 if menu == 1 then CZCA() end
@@ -568,19 +570,23 @@ if menu == 3 then KF() end
 if menu == 4 then CAZY() end
 FX1=0
 end
-
+------创造
 function CZCA()
 SN = gg.multiChoice({
 	 "召唤虚空幻影1",
 	 "召唤虚空幻影2",
 	 "召唤虚空幻影3",
+	 "香溢蔬菜煲改中心长方体",
+	 "瓶装牛奶改球体",
 	 "返回上一页",
 }, nil, "稳定性大大提升")
  if SN == nil then else
 if SN[1]==true then ZT1() end
 if SN[2]==true then ZT2() end
 if SN[3]==true then ZT3() end
-if SN[4]==true then CA1() end end
+if SN[4]==true then ZT4() end
+if SN[5]==true then ZT5() end
+if SN[6]==true then CA1() end end
 FX1=0 end
 
 function ZT1()
@@ -616,6 +622,28 @@ gg.toast("召唤虚空幻影第3步开启成功")
 CAZY()
 end
 
+function ZT4()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("12554",  gg.TYPE_DWORD,false,gg.SIGN_EQUAL,0, -1)
+gg.searchNumber("12554", gg.TYPE_DWORD,false,gg.SIGN_EQUAL,0,-1)
+gg.getResults(100)
+gg.editAll("15525",gg.TYPE_DWORD)
+gg.toast("香溢蔬菜煲改中心长方体开启成功")
+CAZY()
+end
+
+function ZT5()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("12509",  gg.TYPE_DWORD,false,gg.SIGN_EQUAL,0, -1)
+gg.searchNumber("12509", gg.TYPE_DWORD,false,gg.SIGN_EQUAL,0,-1)
+gg.getResults(100)
+gg.editAll("15524",gg.TYPE_DWORD)
+gg.toast("瓶装牛奶改球体开启成功")
+CAZY()
+end
+
 function KF()
 gg.alert("开启成功后拿出喷漆即可")
 gg.clearResults()
@@ -627,7 +655,8 @@ gg.editAll("11907",gg.TYPE_DWORD)
 gg.toast("喷漆罐改琵琶开启成功")
 CAZY()
 end
-
+-----创造
+-----生存
 function SCCA()
 menu = gg.choice({
 	 "玩法改创造",
@@ -639,6 +668,7 @@ if menu == 1 then SC1() end
 if menu == 2 then SC2() end
 if menu == 3 then SC3() end
 if menu == 4 then CA1() end
+if menu == 5 then CA1() end
 FX1=0
 end
 
@@ -679,6 +709,12 @@ end
 function SC3()
 F=gg.alert("乐谱取物","乐谱修改","添加按钮")if F ~= 1 and F ~= 2 then else end if F==1 then e1 = gg.prompt({"11551-破坏方块15054-黑龙火球10500-地形编辑器"},{[1]=11551},{[1]="number"})[1]gg.toast(so({"乐谱修改",4683671800612126720,4,32},{{13975404208,4,32}},{{e1,-0x10,64,1}}))gg.toast("乐谱已修改为["..e1.."]")CA1()elseif F==2 then gg.toast(so({"添加按钮",-1024458752,4,4},{{1142292480,-4,4},{16777216,-0x5C,4},{1110179840,-0x1C,4}},{{16777472,-0x5C,4,1}}))gg.toast("添加按钮已注入")CA1()end end
 
+function SC4()
+gg.toast(so({"刷怪方块生物修改为远古巨人",3514,4,64},{{1084920320,20,4}},{{xgdm,0,64}}))
+gg.toast("方块内生物已修改为[远古巨人]")
+end
+------生存
+
 --------------PVP
 
 function ZDL()
@@ -689,8 +725,9 @@ SN = gg.multiChoice({
      "高跳",
 	 "视角透视",
 	 "吸人",
+	 "飞行速度",
 	 "返回上一页",
-}, nil, "我们支持多选了!")
+}, nil, "部分功能已修复并重新添加.")
  if SN == nil then else
 if SN[1]==true then PVP1() end
 if SN[2]==true then PVP2() end
@@ -698,7 +735,8 @@ if SN[3]==true then PVP3() end
 if SN[4]==true then PVP4() end
 if SN[5]==true then PVP5() end
 if SN[6]==true then PVP6() end
-if SN[7]==true then CA1() end end
+if SN[7]==true then PVP7() end
+if SN[8]==true then CA1() end end
 FX1=0 end
 
 function PVP1()
@@ -796,6 +834,12 @@ xqmnb(qmnb)
 gg.clearResults()
 CA1()
 end
+
+function PVP7()
+gg.toast(so({"飞行速度",778462837,16384,4},{{-1109160391,-0x28,4}},{{20,-0x2c,16,2}}))
+CA1()
+end
+
 ---pvp
 
 
@@ -804,12 +848,14 @@ menu = gg.choice({
 	 "狙击枪无后座连发",
 	 "秒换子弹",
 	 "狙击枪无后座连发(开第一个闪退的开这个)",
+	 "狙击准心",
 	 "返回上一页",
 }, nil, "")
 if menu == 1 then V1() end
 if menu == 2 then V2() end
 if menu == 3 then V3() end
-if menu == 4 then CA1() end
+if menu == 4 then V4() end
+if menu == 5 then CA1() end
 FX1=0
 end
 
@@ -817,10 +863,10 @@ function V1()
  gg.toast(so({("狙击枪无后座连发"),15003,4,2,2},{{("15000~15009"),-136}},{{1,-4},{0,-66},{0,-56,16},{0,-40},{1,-28},{0,-52,16},{32000,-0x3e}}))
  end
  
- function V2()
+function V2()
 qmnb = {
 {["memory"] = 4},
-{["name"] = "1秒钟换子弹"},
+{["name"] = "秒换子弹"},
 {["value"] =15003 , ["type"] = 4},
 {["lv"] = 15004, ["offset"] = -136, ["type"] = 4},
 }
@@ -844,6 +890,11 @@ qmxg =
 {["value"] = 0, ["offset"] = -28, ["type"] = 16},
 {["value"] = 0, ["offset"] = -44, ["type"] = 16},}
 xqmnb(qmnb)
+CA1()
+end
+
+function V4()
+gg.toast(so({"狙击准星",15003,4,4},{{40,-32,4}},{{1,-28,4}}))
 CA1()
 end
 
@@ -893,43 +944,6 @@ function LD3()
 nc_offset(getso("libil2cpp.so"),{{-516948194,4,0xd93420},})
 end
 
-function QT()
-menu = gg.choice({
-"版本信息",
-"更新内容",
-"帮助",
-"返回上一页",
-}, nil, "")
-if menu == 1 then XX() end
-if menu == 2 then GX() end
-if menu == 3 then BZ() end
-if menu == 4 then CA1() end
-FX1=0
-end
-
-function XX()
-gg.alert("CA炸图辅助版本号:1.10.6.0\n更新日期:3.24")
-QT()
-end
-
-function GX()
-gg.alert("修复部分bug\n删除无用功能\n新增云浮飞天")
-QT()
-end
-
-function BZ()
-F=gg.alert("问:为什么我的辅助全部功能都开启失败\n答:进程选错了或您的设备是安卓12、13或harmonyOS3,由于谷歌对aosp的封闭导致部分无法使用。\n-\n问:为什么我开防闪退会提示退出辅助\n答:没选进程或你是32位设备(典型的有:华为畅享10e,20e，红米9A)，请更换为64位设备再试。\n-\n问:生存改创造怎么用?\n答:输入房主迷你号。","知道了", "️我还不明白")
-if F ~= 1 and F ~= 2 then
-gg.toast("你未选择开关默认返回")
-CA1()
-else
-end
-if F==1 then
-QT()
-elseif F==2 then
-gg.alert("我操你妈这都看不懂你他妈幼儿园智商是不是的")
-end
-end
 
 function QW()
 menu = gg.choice({
@@ -993,6 +1007,44 @@ function Q8()
 gg.toast(so({"乐谱修改",4683671800612126720,4,32},{{13975404208,4,32}},{{1000,-0x10,64,1}}))
 gg.toast("乐谱已修改为[方块复制器]")
 CA1()
+end
+
+function QT()
+menu = gg.choice({
+"版本信息",
+"更新内容",
+"帮助",
+"返回上一页",
+}, nil, "")
+if menu == 1 then XX() end
+if menu == 2 then GX() end
+if menu == 3 then BZ() end
+if menu == 4 then CA1() end
+FX1=0
+end
+
+function XX()
+gg.alert("CA炸图辅助版本号:1.11.0.0\n更新日期:3.30")
+QT()
+end
+
+function GX()
+gg.alert("修复部分bug\n修复部分功能并重新上架\n新增飞行速度")
+QT()
+end
+
+function BZ()
+F=gg.alert("问:为什么我的辅助全部功能都开启失败\n答:进程选错了或您的设备是安卓12、13或harmonyOS3,由于谷歌对aosp的封闭导致部分无法使用。\n-\n问:为什么我开防闪退会提示退出辅助\n答:没选进程或你是32位设备(典型的有:华为畅享10e,20e，红米9A)，请更换为64位设备再试。\n-\n问:生存改创造怎么用?\n答:输入房主迷你号。","知道了", "️我还不明白")
+if F ~= 1 and F ~= 2 then
+gg.toast("你未选择开关默认返回")
+CA1()
+else
+end
+if F==1 then
+QT()
+elseif F==2 then
+gg.alert("我操你妈这都看不懂你他妈幼儿园智商是不是的")
+end
 end
 
 while true do
